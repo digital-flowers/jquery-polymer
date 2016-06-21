@@ -58,6 +58,9 @@ jQuery.fn.extend({
     getShadowRoot: function () {
         return $(this[0].shadowRoot);
     },
+    shadow: function(){
+        return this.getShadowRoot();
+    },
     getOwnerShadowRoot: function () {
         var templateInstance = this[0].templateInstance;
         var shadow;
