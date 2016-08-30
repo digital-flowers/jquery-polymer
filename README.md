@@ -19,4 +19,4 @@ this function return the element shadow root as Jquery object where you can acce
 
 `$("#element").find(":shadow")` this psudo selector refere to any elemnt shadow root
 
-also this plugin fix jquery offset() function for the any element inside a webcomponent (shadow root) 
+also this plugin fix jquery offset() function for any element inside a webcomponent (shadow root) 
