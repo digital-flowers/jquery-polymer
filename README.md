@@ -1,16 +1,22 @@
 # jquery-polymer
 
-to select any element inside a polymer element lets say
+**this jquery plugin extend several jquery functions for web components manpulations specialy accessing web components internal shadow root and template elements:**
 
-<my-button id='button1'></my-button>
+`$.nativeShadowDOM()`
+this function return true if the browser already support shadow dom natively without any polyfill
 
 
-first you need to get the button shadow root using
+`$("#element").hasShadowRoot()`
+this function return true if the selected element has shadow root
 
-$("#button1").getShadowRoot() or $("#button1").shadow()
 
-this will return the button shadow root as jquery object 
+`$("#element").shadow()` or `$("#element").getShadowRoot()`
+this function return the element shadow root as Jquery object where you can access internal template items for example you can do `$("#element").shadow().find("#my-button")`
 
-then you can select anything inside it for example
 
-$("#button1").shadow().find("ul > li:first")
+`$("#element").getOwnerShadowRoot()` this function return the parent element shadow root if the selected element is inside a web component template  
+
+
+`$("#element").find(":shadow")` this psudo selector refere to any elemnt shadow root
+
+also this plugin fix jquery offset() function for the any element inside a webcomponent (shadow root) 
